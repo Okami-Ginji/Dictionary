@@ -67,6 +67,10 @@ public class TranslateDAO {
                     while ((line = bufferedReader.readLine()) != null) {
                         String[] word = line.split("=");
                         hm.put(word[0], word[1]);
+                        if(word[0].contains("c")) {
+                            System.out.println("Fuck you");
+                            System.exit(0);
+                        }
                     }
                     bufferedReader.close();
                     fileReader.close();
